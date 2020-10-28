@@ -8,6 +8,10 @@ public class Digrafo {
     private TreeMap<String,ArrayList<String>> adjMap;
 
     public Digrafo(String[] treatedText) {
+        createTreeMap(treatedText);
+    }
+
+    private void createTreeMap(String[] treatedText) {
         adjMap = new TreeMap<>();
         for (int i = 0; i < treatedText.length-1; i++) {
             if (!adjMap.containsKey(treatedText[i])) {
@@ -17,7 +21,8 @@ public class Digrafo {
         }
         System.out.println("");
     }
-    
-    
 
+    public TreeMap<String, ArrayList<String>> getAdjMap() {
+        return adjMap;
+    }    
 }
