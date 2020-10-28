@@ -17,11 +17,18 @@ public class Digrafo {
             if (!adjMap.containsKey(treatedText[i])) {
                 adjMap.put(treatedText[i], new ArrayList<>());
             }
-            adjMap.get(treatedText[i]).add(treatedText[i+1]);
+            
+            insertTreeMap(treatedText, i);
         }
-        System.out.println("");
     }
 
+    private void insertTreeMap(String[] treatedText, int i) {
+        boolean alreadyExist = adjMap.get(treatedText[i]).contains(treatedText[i+1]);
+        if(!alreadyExist){
+            adjMap.get(treatedText[i]).add(treatedText[i+1]);
+        }
+    }
+    
     public TreeMap<String, ArrayList<String>> getAdjMap() {
         return adjMap;
     }    
