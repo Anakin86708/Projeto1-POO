@@ -1,13 +1,20 @@
 package projeto1.poo;
 
+import java.util.ArrayList;
+import java.util.TreeMap;
+
 public class WriteCSV {
 
-	public void writeFile() {
+    public WriteCSV(TreeMap<String,ArrayList<String>> adjMap) {
+        
+    }  
 
-	}
+    private void writeFile() {
 
-	public void orderWords() {
+    }
 
-	}
+    private void orderWords(TreeMap<String,ArrayList<String>> adjMap) {
+        
+    }
 
 }
