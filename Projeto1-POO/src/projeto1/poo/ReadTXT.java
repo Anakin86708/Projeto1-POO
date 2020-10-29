@@ -7,11 +7,6 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
-/**
- * Recebe o arquivo .txt, removendo pontuações, transformando o conteúdo para 
- * minúsculo e separando as palavras
- */
 public class ReadTXT {
 
     private final List<String> treatedTextArrayList;    

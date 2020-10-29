@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package projeto1.poo;
 
 import java.io.IOException;
@@ -15,6 +10,7 @@ import java.util.logging.Logger;
 import static org.junit.Assert.*;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import static projeto1.poo.TestResources.generateResultTreeMap;
 
 
 /**
@@ -33,7 +29,7 @@ public class WriteCSVTest {
     @Test
     public void testSomeMethod() {
         try {
-            TreeMap<String,List<String>> adjMap = DigrafoTest.generateResult();
+            TreeMap<String,List<String>> adjMap = generateResultTreeMap();
             WriteCSV instance = new WriteCSV(adjMap, "result.csv");
 
             List<String> file1 = Files.readAllLines(Paths.get("expected.csv"));
