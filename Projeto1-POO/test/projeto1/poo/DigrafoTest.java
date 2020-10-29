@@ -44,7 +44,7 @@ public class DigrafoTest {
         //fail("The test case is a prototype.");
     }
     // método para treemap
-    private TreeMap<String, List<String>> generateResult(){
+    public static TreeMap<String, List<String>> generateResult(){
         TreeMap<String, List<String>> expResult = new TreeMap<>();
         String[] keys = {"john", "who", "loved", "marry", "julio", "that", "no"};
         
