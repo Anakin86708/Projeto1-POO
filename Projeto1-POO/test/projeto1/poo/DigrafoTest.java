@@ -35,7 +35,10 @@ public class DigrafoTest {
         Digrafo instance = new Digrafo(array);
         TreeMap<String, ArrayList<String>> expResult = generateResult();
         TreeMap<String, ArrayList<String>> result = instance.getAdjMap();
+        System.out.println("Esperado: " + expResult);
+        System.out.println("Resultado: " + result);
         assertEquals(expResult, result);
+        
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
     }
@@ -60,7 +63,7 @@ public class DigrafoTest {
         expResult.put("who", listWho);
         expResult.put("loved", listLoved);
         expResult.put("marry", listMarry);
-        expResult.put("who", listJulio);
+        expResult.put("julio", listJulio);
         expResult.put("that", listThat);
         expResult.put("no", listNo);
         
