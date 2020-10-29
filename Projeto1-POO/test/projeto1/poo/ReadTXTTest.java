@@ -6,13 +6,10 @@
 package projeto1.poo;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
+import java.util.List;
 import static org.junit.Assert.*;
+import org.junit.Test;
 
 /**
  *
@@ -20,21 +17,6 @@ import static org.junit.Assert.*;
  */
 public class ReadTXTTest {
     
-    public ReadTXTTest() {
-    }
-    
-    @BeforeClass
-    public static void setUpClass() {
-    }
-    
-    @AfterClass
-    public static void tearDownClass() {
-    }
-    
-    @Before
-    public void setUp() {
-    }
-
     /**
      * Test of getTreatedTextArrayList method, of class ReadTXT.
      */
@@ -42,23 +24,38 @@ public class ReadTXTTest {
     public void testGetTreatedTextArrayList() {
         System.out.println("getTreatedTextArrayList");
         String fileNameString = "test/projeto1/poo/test1.txt";
-        ReadTXT instance = new ReadTXT(fileNameString);
         String[] c = {"joão","amava","maria","que","amava","júlio","que","não","amava","ninguém"}; 
-        ArrayList<String> expResult = new ArrayList<> ();
-        Collections.addAll(expResult, c);
-        ArrayList<String> result = instance.getTreatedTextArrayList();
-        assertEquals(expResult, result);
+        setupTestClass(fileNameString, c);
     }
     
     @Test
-    public void TRUMPtestGetTreatedTextArrayList() {
+    public void englishTestGetTreatedTextArrayList() {
         System.out.println("getTreatedTextArrayList");
-        String fileNameString = "test/projeto1/poo/testTrump.txt";
-        ReadTXT instance = new ReadTXT(fileNameString);
+        String fileNameString = "test/projeto1/poo/test2.txt";
         String[] c = {"john", "who", "loved", "marry", "who", "loved", "julio", "that", "loved", "no", "one"}; 
+        setupTestClass(fileNameString, c);
+    }
+    
+    @Test
+    public void ex3Test() {
+        System.out.println("ex1Test");
+        String filenameString = "test/projeto1/poo/Ex3_LuarDoSertao.txt";
+        String[] c = {"não","há","ó","gente","ó","não","luar","como","esse","do",
+        "sertão","não","há","ó","gente","ó","não","luar","como","esse","do",
+        "sertão","oh","que","saudade","do","luar","da","minha","terra","lá","na",
+        "serra","branquejando","folhas","secas","pelo","chão","este","luar","cá",
+        "da","cidade","tão","escuro","não","tem","aquela","saudade","do","luar",
+        "lá","do","sertão","não","há","ó","gente","ó","não","luar","como","esse",
+        "do","sertão","não","há","ó","gente","ó","não","luar","como","esse","do",
+        "sertão"};
+        setupTestClass(filenameString, c);
+    }
+
+    private void setupTestClass(String fileNameString, String[] c) {
+        ReadTXT instance = new ReadTXT(fileNameString);
         ArrayList<String> expResult = new ArrayList<> ();
         Collections.addAll(expResult, c);
-        ArrayList<String> result = instance.getTreatedTextArrayList();
+        List<String> result = instance.getTreatedTextArrayList();
         assertEquals(expResult, result);
     }
     

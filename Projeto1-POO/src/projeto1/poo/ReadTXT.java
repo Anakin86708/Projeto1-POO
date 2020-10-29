@@ -3,6 +3,7 @@ package projeto1.poo;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -13,7 +14,7 @@ import java.util.logging.Logger;
  */
 public class ReadTXT {
 
-    private final ArrayList<String> treatedTextArrayList;    
+    private final List<String> treatedTextArrayList;    
 
     /**
      * Cria um objeto do tipo File e separa as palavras do seu conteúdo
@@ -24,7 +25,7 @@ public class ReadTXT {
         treatedTextArrayList = splitWords(file);
     }
 
-    public ArrayList<String> getTreatedTextArrayList() {
+    public List<String> getTreatedTextArrayList() {
         return treatedTextArrayList;
     }
 
@@ -33,8 +34,8 @@ public class ReadTXT {
      * @param file O arquivo .txt carregado anteriormente
      * @return arrayList com as palavras separadas e sem pontuação
      */
-    private ArrayList<String> splitWords(File file) {
-        ArrayList<String> arrayList = new ArrayList<>();
+    private List<String> splitWords(File file) {
+        List<String> arrayList = new ArrayList<>();
         try {
             Scanner scanner = new Scanner(file, "utf-8");
             while (scanner.hasNext()) {
