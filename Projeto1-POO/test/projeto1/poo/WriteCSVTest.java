@@ -4,13 +4,12 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.List;
-import java.util.TreeMap;
+import java.util.SortedMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import static org.junit.Assert.*;
-import org.junit.BeforeClass;
 import org.junit.Test;
-import static projeto1.poo.TestResources.generateResultTreeMap;
+import static projeto1.poo.TestResources.generateResultSortedMap;
 
 
 /**
@@ -19,18 +18,12 @@ import static projeto1.poo.TestResources.generateResultTreeMap;
  */
 public class WriteCSVTest {
     
-    
-    @BeforeClass
-    public static void setUpClass() {
-    }
-    public WriteCSVTest() {
-    }
 
     @Test
     public void testSomeMethod() {
         try {
-            TreeMap<String,List<String>> adjMap = generateResultTreeMap();
-            WriteCSV instance = new WriteCSV(adjMap, "result.csv");
+            SortedMap<String,List<String>> adjMap = generateResultSortedMap();
+            new WriteCSV(adjMap, "result.csv");
 
             List<String> file1 = Files.readAllLines(Paths.get("expected.csv"));
             List<String> file2 = Files.readAllLines(Paths.get("result.csv"));
