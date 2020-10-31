@@ -2,11 +2,12 @@ package projeto1.poo;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.SortedMap;
 import java.util.TreeMap;
 
 public class Digrafo {
 
-    private TreeMap<String,List<String>> adjMap;
+    private SortedMap<String,List<String>> adjMap;
 
     public Digrafo(String[] treatedText) {
         createTreeMap(treatedText);
@@ -30,7 +31,7 @@ public class Digrafo {
         }
     }
     
-    public TreeMap<String, List<String>> getAdjMap() {
+    public SortedMap<String, List<String>> getAdjMap() {
         return adjMap;
     }    
 }
