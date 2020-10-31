@@ -3,6 +3,7 @@ package projeto1.poo;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.SortedMap;
 import java.util.TreeMap;
 
 /**
@@ -11,7 +12,7 @@ import java.util.TreeMap;
  */
 public class TestResources {
     // método para treemap
-    public static TreeMap<String, List<String>> generateResultTreeMap(){
+    public static SortedMap<String, List<String>> generateResultSortedMap(){
         TreeMap<String, List<String>> expResult = new TreeMap<>();
         String[] keys = {"john", "who", "loved", "marry", "julio", "that", "no"};
         
