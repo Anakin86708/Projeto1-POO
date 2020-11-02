@@ -59,7 +59,7 @@ public class ReadTXT {
      * @return string filtrada
      */
     private String removePunctuation(String toTreat) {
-        String regexToReplace = "[^\\p{L}\\d\\s_]";
+        String regexToReplace = "[^\\p{L}\\d\\s_']";
         return toTreat.replaceAll(regexToReplace, "");
     }
 

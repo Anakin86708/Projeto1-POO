@@ -8,7 +8,6 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import static org.junit.Assert.*;
 import static projeto1.poo.TestResources.compareFiles;
 
 public class ControlTest {
@@ -23,6 +22,7 @@ public class ControlTest {
         Collections.addAll(inputTest, fileNamesStrings);
         Control instance = new Control(inputTest);
         String[] outputStrings = {"test/resources/SolEx1_WantedAndWild.csv", "test/resources/SolEx3_LuarDoSertao.csv"};
+        
         try {
             for (int i = 0; i < outputStrings.length; i++) {
                 compareFiles(outputStrings[i], fileNamesStrings[i].replace(".txt", ".csv"));

@@ -3,6 +3,7 @@ package projeto1.poo;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.nio.charset.Charset;
 import java.util.List;
 import java.util.Map;
 import java.util.SortedMap;
@@ -19,8 +20,7 @@ public class WriteCSV {
             if (!file.exists()) {
                 file.createNewFile();
             }
-            
-            FileWriter fileWriter = new FileWriter(file);
+            FileWriter fileWriter = new FileWriter(file, Charset.forName("UTF-8"));
             for (Map.Entry<String, List<String>> entry : adjMap.entrySet()) {
                 String key = entry.getKey();
                 List<String> value = entry.getValue();
