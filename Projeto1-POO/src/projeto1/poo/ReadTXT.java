@@ -10,8 +10,8 @@ public class ReadTXT {
     private List<String> treatedTextArrayList;    
 
     /**
-     * Cria um objeto do tipo File e separa as palavras do seu conteúdo
-     * @param fileNameString
+     * Creates an object of File type and splits words from their content
+     * @param fileNameString - .txt file name
      */
     public ReadTXT(String fileNameString) {
         try {
@@ -34,9 +34,9 @@ public class ReadTXT {
     }
 
     /**
-     * Recebe o arquivo, faz o tratamento e adiciona as linhas ao ArrayList
-     * @param file O arquivo .txt carregado anteriormente
-     * @return arrayList com as palavras separadas e sem pontuação
+     * Receives a file, treat it and add all lines to ArrayList
+     * @param file .txt archive loaded before
+     * @return A arrayList with words splitted and without punctuation
      */
     private List<String> splitWords(File file) {
         List<String> arrayList = new ArrayList<>();
@@ -53,17 +53,16 @@ public class ReadTXT {
     }
     
     /**
-     * Recebe a string e a transforma para minúsculo
-     * @param toTreat string carregada
-     * @return string com os caracteres minúsculos
+     * Receives a string and transform it to lowercase
+     * @param toTreat loaded string
+     * @return string with lowercase characters
      */
     private String lowerWords(String toTreat) {
         return toTreat.toLowerCase();
     }
 
     /**
-     * Recebe a string e aplica um filtro substuindo qualquer caractere que não
-     * seja uma letra
+     * Receives a string and applies a filter replacing any non-letter character
      * @param toTreat string carregada
      * @return string filtrada
      */
