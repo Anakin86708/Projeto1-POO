@@ -1,10 +1,14 @@
 package projeto1.poo;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.SortedMap;
 import java.util.TreeMap;
+import static org.junit.Assert.*;
 
 /**
  *
@@ -30,6 +34,17 @@ public class TestResources {
         }   
      
        return expResult;
+    }
+    
+    public static void compareFiles(String fileNameExpected, String fileNameActual) throws IOException {
+        List<String> fileExpected = Files.readAllLines(Paths.get(fileNameExpected));
+        List<String> fileActual = Files.readAllLines(Paths.get(fileNameActual));
+        
+        assertEquals(fileExpected.size(), fileActual.size());
+        for(int i = 0; i < fileExpected.size(); i++) {
+            System.out.println("Comparing line: " + i);
+            assertEquals(fileExpected.get(i), fileActual.get(i));
+        }
     }
     
 }

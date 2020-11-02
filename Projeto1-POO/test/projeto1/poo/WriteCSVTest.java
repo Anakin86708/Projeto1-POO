@@ -10,6 +10,7 @@ import java.util.logging.Logger;
 import static org.junit.Assert.*;
 import org.junit.Test;
 import static projeto1.poo.TestResources.generateResultSortedMap;
+import static projeto1.poo.TestResources.compareFiles;
 
 
 /**
@@ -25,15 +26,7 @@ public class WriteCSVTest {
             SortedMap<String,List<String>> adjMap = generateResultSortedMap();
             new WriteCSV(adjMap, "test/resources/result.csv");
 
-            List<String> file1 = Files.readAllLines(Paths.get("test/resources/expected.csv"));
-            List<String> file2 = Files.readAllLines(Paths.get("test/resources/result.csv"));
-            
-            assertEquals(file1.size(), file2.size());
-            
-            for(int i = 0; i < file1.size(); i++) {
-                System.out.println("Comparing line: " + i);
-                assertEquals(file1.get(i), file2.get(i));
-            }
+            compareFiles();
             
         } catch (IOException ex) {
             Logger.getLogger(WriteCSVTest.class.getName()).log(Level.SEVERE, null, ex);

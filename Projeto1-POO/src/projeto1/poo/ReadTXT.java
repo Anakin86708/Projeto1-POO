@@ -20,7 +20,7 @@ public class ReadTXT {
         treatedTextArrayList = splitWords(file);
     }
 
-    public List<String> getTreatedTextArrayList() {
+    public List<String> getTreatedTextList() {
         return treatedTextArrayList;
     }
 

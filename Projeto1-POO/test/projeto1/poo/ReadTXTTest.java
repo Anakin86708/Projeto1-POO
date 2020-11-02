@@ -16,7 +16,7 @@ public class ReadTXTTest {
      * Test of getTreatedTextArrayList method, of class ReadTXT.
      */
     @Test
-    public void testGetTreatedTextArrayList() {
+    public void testGetTreatedTextList() {
         System.out.println("getTreatedTextArrayList");
         String fileNameString = "test/resources/test1.txt";
         String[] c = {"joão","amava","maria","que","amava","júlio","que","não","amava","ninguém"}; 
@@ -50,7 +50,7 @@ public class ReadTXTTest {
         ReadTXT instance = new ReadTXT(fileNameString);
         ArrayList<String> expResult = new ArrayList<> ();
         Collections.addAll(expResult, c);
-        List<String> result = instance.getTreatedTextArrayList();
+        List<String> result = instance.getTreatedTextList();
         assertEquals(expResult, result);
     }
     
