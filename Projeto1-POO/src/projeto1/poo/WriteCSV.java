@@ -21,6 +21,7 @@ public class WriteCSV {
                 file.createNewFile();
             }
             FileWriter fileWriter = new FileWriter(file, Charset.forName("UTF-8"));
+            System.out.println("Writing file " + fileName);
             for (Map.Entry<String, List<String>> entry : adjMap.entrySet()) {
                 String key = entry.getKey();
                 List<String> value = entry.getValue();
@@ -33,7 +34,7 @@ public class WriteCSV {
             fileWriter.flush();
             fileWriter.close();
         } catch (IOException iOException) {
-            
+            System.err.println("Não foi\n" +iOException.getMessage());
         }
     }
 

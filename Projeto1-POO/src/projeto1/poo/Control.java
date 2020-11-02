@@ -10,7 +10,7 @@ public class Control {
             List<String> textReaded = read(fileNameItem);
             SortedMap<String, List<String>> processedDigraph = process(textReaded);
             write(processedDigraph, fileNameItem);
-        });    
+        });
     }
         
     private List<String> read(String fileName) {

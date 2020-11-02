@@ -18,10 +18,22 @@ public class ControlTest {
     @BeforeClass
     public static void setUpClass() {
         List<String> inputTest = new ArrayList<>();
-        String[] fileNamesStrings = {"test/resources/Ex1_WantedAndWild.txt", "test/resources/Ex3_LuarDoSertao.txt"};
+        String[] fileNamesStrings = {
+            "test/resources/Ex1_WantedAndWild.txt",
+            "test/resources/Ex2_AMascaraDaMorteRubra.txt",
+            "test/resources/Ex3_LuarDoSertao.txt",
+            "test/resources/Ex4_Parabens.txt",
+            "test/resources/Ex5_TresMotivosParaVacinarSeuPet.txt"
+        };
         Collections.addAll(inputTest, fileNamesStrings);
         Control instance = new Control(inputTest);
-        String[] outputStrings = {"test/resources/SolEx1_WantedAndWild.csv", "test/resources/SolEx3_LuarDoSertao.csv"};
+        String[] outputStrings = {
+            "test/resources/SolEx1_WantedAndWild.txt",
+            "test/resources/SolEx2_AMascaraDaMorteRubra.txt",
+            "test/resources/SolEx3_LuarDosSertao.txt",
+            "test/resources/SolEx4_Parabens.txt",
+            "test/resources/SolEx5_TresMotivosParaVacinarSeuPet.txt"
+        };
         
         try {
             for (int i = 0; i < outputStrings.length; i++) {
