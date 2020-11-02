@@ -20,21 +20,27 @@ public class WriteCSV {
             if (!file.exists()) {
                 file.createNewFile();
             }
+            
             FileWriter fileWriter = new FileWriter(file, Charset.forName("UTF-8"));
             System.out.println("Writing file " + fileName);
-            for (Map.Entry<String, List<String>> entry : adjMap.entrySet()) {
-                String key = entry.getKey();
-                List<String> value = entry.getValue();
-                fileWriter.write(key);
-                for (String string : value) {
-                    fileWriter.write(", " + string);
-                }
-                fileWriter.write("\n");
-            }
+            
+            writeEachLine(adjMap, fileWriter);
             fileWriter.flush();
             fileWriter.close();
         } catch (IOException iOException) {
-            System.err.println("Não foi\n" +iOException.getMessage());
+            System.err.println("File " + fileName + " cannot be written!\n" + iOException.getLocalizedMessage());
+        }
+    }
+
+    private void writeEachLine(SortedMap<String, List<String>> adjMap, FileWriter fileWriter) throws IOException {
+        for (Map.Entry<String, List<String>> entry : adjMap.entrySet()) {
+            String key = entry.getKey();
+            List<String> value = entry.getValue();
+            fileWriter.write(key);
+            for (String string : value) {
+                fileWriter.write(", " + string);
+            }
+            fileWriter.write("\n");
         }
     }
 

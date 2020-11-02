@@ -13,10 +13,6 @@ import java.util.TreeMap;
 import java.util.TreeSet;
 import static org.junit.Assert.*;
 
-/**
- *
- * @author silva
- */
 public class TestResources {
     // método para treemap
     public static SortedMap<String, List<String>> generateResultSortedMap(){

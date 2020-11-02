@@ -44,8 +44,15 @@ public class ControlTest {
         }
     }
 
-    @Test
-    public void testSomeMethod() {
+    @Test(expected = Exception.class)
+    public void testInvalidFile() {
+        List<String> inputTest = new ArrayList<>();
+        String[] fileNamesStrings = {
+            "test/resources/Ex1_WantedAndWild.txt",
+            "test/resources/Ex2_AMascaraDaMorteRubra.doc",
+        };
+        Collections.addAll(inputTest, fileNamesStrings);
+        Control instance = new Control(inputTest);
         
     }
     

@@ -5,16 +5,16 @@ import java.util.List;
 import java.util.SortedMap;
 import java.util.TreeMap;
 
-public class Digrafo {
+public class Digraph {
 
-    private SortedMap<String,List<String>> adjMap;
+    private final SortedMap<String,List<String>> adjMap;
 
-    public Digrafo(String[] treatedText) {
+    public Digraph(String[] treatedText) {
+        adjMap = new TreeMap<>();
         createTreeMap(treatedText);
     }
 
     private void createTreeMap(String[] treatedText) {
-        adjMap = new TreeMap<>();
         for (int i = 0; i < treatedText.length-1; i++) {
             if (!adjMap.containsKey(treatedText[i])) {
                 adjMap.put(treatedText[i], new ArrayList<>());

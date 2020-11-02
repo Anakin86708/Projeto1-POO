@@ -19,7 +19,7 @@ public class Control {
     }
 
     private SortedMap<String, List<String>> process(List<String> textReaded) {
-        Digrafo digraph = new Digrafo(textReaded.stream().toArray(String []:: new));
+        Digraph digraph = new Digraph(textReaded.stream().toArray(String []:: new));
         return digraph.getAdjMap();
     }
 

@@ -5,19 +5,28 @@ import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 public class ReadTXT {
 
-    private final List<String> treatedTextArrayList;    
+    private List<String> treatedTextArrayList;    
 
     /**
      * Cria um objeto do tipo File e separa as palavras do seu conteúdo
      * @param fileNameString
      */
     public ReadTXT(String fileNameString) {
-        File file = new File(fileNameString);
-        treatedTextArrayList = splitWords(file);
+        try {
+            if (!validateFileName(fileNameString))
+                throw new Exception(fileNameString + "isn`t a valid .txt file\n");
+            
+            File file = new File(fileNameString);
+            treatedTextArrayList = splitWords(file);
+        } catch (Exception e) {
+            System.err.println("Invalid file!\n" + e.getLocalizedMessage());
+        }
+    }
+    
+    private boolean validateFileName(String fileName) {
+        return fileName.contains(".txt");
     }
 
     public List<String> getTreatedTextList() {
@@ -38,7 +47,7 @@ public class ReadTXT {
                 arrayList.add(splitedLine);
             }
         } catch (FileNotFoundException ex) {
-            Logger.getLogger(ReadTXT.class.getName()).log(Level.SEVERE, null, ex);
+            System.err.println("File " + file.getName() + " not found!\n" + ex.getLocalizedMessage());
         }
         return arrayList;
     }
