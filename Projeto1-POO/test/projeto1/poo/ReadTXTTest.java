@@ -18,7 +18,7 @@ public class ReadTXTTest {
     @Test
     public void testGetTreatedTextArrayList() {
         System.out.println("getTreatedTextArrayList");
-        String fileNameString = "test/projeto1/poo/test1.txt";
+        String fileNameString = "test/resources/test1.txt";
         String[] c = {"joão","amava","maria","que","amava","júlio","que","não","amava","ninguém"}; 
         setupTestClass(fileNameString, c);
     }
@@ -26,7 +26,7 @@ public class ReadTXTTest {
     @Test
     public void englishTestGetTreatedTextArrayList() {
         System.out.println("getTreatedTextArrayList");
-        String fileNameString = "test/projeto1/poo/test2.txt";
+        String fileNameString = "test/resources/test2.txt";
         String[] c = {"john", "who", "loved", "marry", "who", "loved", "julio", "that", "loved", "no", "one"}; 
         setupTestClass(fileNameString, c);
     }
@@ -34,7 +34,7 @@ public class ReadTXTTest {
     @Test
     public void ex3Test() {
         System.out.println("ex1Test");
-        String filenameString = "test/projeto1/poo/Ex3_LuarDoSertao.txt";
+        String filenameString = "test/resources/Ex3_LuarDoSertao.txt";
         String[] c = {"não","há","ó","gente","ó","não","luar","como","esse","do",
         "sertão","não","há","ó","gente","ó","não","luar","como","esse","do",
         "sertão","oh","que","saudade","do","luar","da","minha","terra","lá","na",

@@ -23,10 +23,10 @@ public class WriteCSVTest {
     public void testSomeMethod() {
         try {
             SortedMap<String,List<String>> adjMap = generateResultSortedMap();
-            new WriteCSV(adjMap, "result.csv");
+            new WriteCSV(adjMap, "test/resources/result.csv");
 
-            List<String> file1 = Files.readAllLines(Paths.get("expected.csv"));
-            List<String> file2 = Files.readAllLines(Paths.get("result.csv"));
+            List<String> file1 = Files.readAllLines(Paths.get("test/resources/expected.csv"));
+            List<String> file2 = Files.readAllLines(Paths.get("test/resources/result.csv"));
             
             assertEquals(file1.size(), file2.size());
             
