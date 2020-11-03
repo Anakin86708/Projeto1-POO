@@ -55,8 +55,8 @@ public class Control {
      * Receives a SortedMap, the treated digraph and the name of the file in
      * which it must be written.
      *
-     * @param processedDigraph O digrafo tratado ?????????????
-     * @param fileName Name to the file. ??????????????
+     * @param processedDigraph Representation of digraph.
+     * @param fileName Name to the output file.
      */
     private void write(SortedMap<String, List<String>> processedDigraph, String fileName) {
         WriteCSV csv = new WriteCSV(processedDigraph, fileName.replace(".txt", ".csv"));
