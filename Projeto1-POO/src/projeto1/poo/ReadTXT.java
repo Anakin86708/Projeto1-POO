@@ -26,7 +26,7 @@ public class ReadTXT {
     }
     
     private boolean validateFileName(String fileName) {
-        return fileName.contains(".txt");
+        return fileName.endsWith(".txt");
     }
 
     public List<String> getTreatedTextList() {

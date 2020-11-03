@@ -7,11 +7,16 @@ import org.junit.Test;
 import static projeto1.poo.TestResources.generateResultSortedMap;
 
 /**
+ * Testa o funcionamento do digrafo, recebendo os parâmetros de forma artificial
+ * e comparando as respectivas saídas com resultados esperados
  *
- * @author enzoj
+ * @author Ariel Tadeu
+ * @author Enzo Fujimoto
+ * @author Guilherme Lopes
+ * @author Leonardo Teixeira
  */
 public class DigraphTest {
-    
+
     /**
      * Test of getAdjMap method, of class Digraph.
      */

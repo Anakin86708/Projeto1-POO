@@ -10,11 +10,24 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import static projeto1.poo.TestResources.compareFiles;
 
+/**
+ * Realiza o testes para a classe {@link Control}
+ *
+ * @author Ariel Tadeu
+ * @author Enzo Fujimoto
+ * @author Guilherme Lopes
+ * @author Leonardo Teixeira
+ */
 public class ControlTest {
+
     
-    public ControlTest() {
-    }
-    
+    /**
+     * Testa toda a integração entre as classes
+     * 
+     * @see ReadTXT
+     * @see Digraph
+     * @see WriteCSV
+     */
     @BeforeClass
     public static void setUpClass() {
         List<String> inputTest = new ArrayList<>();
@@ -44,6 +57,9 @@ public class ControlTest {
         }
     }
 
+    /**
+     * Testa a exception gerada por arquivo sem formato .txt
+     */
     @Test(expected = Exception.class)
     public void testInvalidFile() {
         List<String> inputTest = new ArrayList<>();
