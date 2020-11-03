@@ -8,7 +8,7 @@ import org.junit.Test;
 
 /**
  * Realiza testes por meio da comparação entre resultados gerados e experados
- * por meio de arquivos de entrada
+ * por meio de arquivos de entrada.
  *
  * @author Ariel Tadeu
  * @author Enzo Fujimoto
@@ -42,7 +42,7 @@ public class ReadTXTTest {
     }
 
     /**
-     * Testing validation files
+     * Testing validation files.
      */
     @Test
     public void ex3Test() {
@@ -60,10 +60,10 @@ public class ReadTXTTest {
     }
 
     /**
-     * Used to generate ArrayList easily
+     * Used to generate ArrayList easily.
      * 
-     * @param fileNameString
-     * @param c
+     * @param fileNameString filename .txt.
+     * @param c Collection added to ArrayList as expected result.
      */
     private void setupTestClass(String fileNameString, String[] c) {
         ReadTXT instance = new ReadTXT(fileNameString);

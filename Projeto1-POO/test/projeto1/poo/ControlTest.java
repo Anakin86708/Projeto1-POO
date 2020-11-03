@@ -9,7 +9,7 @@ import org.junit.Test;
 import static projeto1.poo.TestResources.compareFiles;
 
 /**
- * Realiza o testes para a classe {@link Control}
+ * Realiza o testes para a classe {@link Control}.
  *
  * @author Ariel Tadeu
  * @author Enzo Fujimoto
@@ -20,7 +20,7 @@ public class ControlTest {
 
     
     /**
-     * Testa toda a integração entre as classes
+     * Testa toda a integração entre as classes.
      * 
      * @see ReadTXT
      * @see Digraph
@@ -58,7 +58,7 @@ public class ControlTest {
     }
     
     /**
-     * Testing using a valid file
+     * Testing using a valid file.
      */
     @Test
     public void testValidFile() {
@@ -77,7 +77,7 @@ public class ControlTest {
     }
 
     /**
-     * Testa a exception gerada por arquivo sem formato .txt
+     * Testa a exception gerada por arquivo sem formato .txt.
      */
     @Test(expected = Exception.class)
     public void testInvalidFile() {

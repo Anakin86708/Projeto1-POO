@@ -10,8 +10,8 @@ public class ReadTXT {
     private List<String> treatedTextList;    
 
     /**
-     * Creates an object of File type and splits words from their content
-     * @param fileNameString - .txt file name
+     * Creates an object of File type and splits words from their content.
+     * @param fileNameString .txt file name.
      */
     public ReadTXT(String fileNameString) {
         try {
@@ -25,18 +25,30 @@ public class ReadTXT {
         }
     }
     
+    /**
+     * Checks if the file extension is .txt.
+     * 
+     * @param fileName name you want to verify.
+     * @return true if contains .txt on end, otherwise false.
+     */
     private boolean validateFileName(String fileName) {
         return fileName.endsWith(".txt");
     }
 
+    /**
+     * Getter for treated text, containing each word treated in a position in 
+     * the list.
+     * 
+     * @return list containing each word treated.
+     */
     public List<String> getTreatedTextList() {
         return treatedTextList;
     }
 
     /**
-     * Receives a file, treat it and add all lines to ArrayList
-     * @param file .txt archive loaded before
-     * @return A arrayList with words splitted and without punctuation
+     * Receives a file, treat it and add all lines to ArrayList.
+     * @param file .txt archive loaded before.
+     * @return A arrayList with words splitted and without punctuation.
      */
     private List<String> splitWords(File file) {
         List<String> arrayList = new ArrayList<>();
@@ -54,18 +66,18 @@ public class ReadTXT {
     }
     
     /**
-     * Receives a string and transform it to lowercase
-     * @param toTreat loaded string
-     * @return string with lowercase characters
+     * Receives a string and transform it to lowercase.
+     * @param toTreat loaded string.
+     * @return string with lowercase characters.
      */
     private String lowerWords(String toTreat) {
         return toTreat.toLowerCase();
     }
 
     /**
-     * Receives a string and applies a filter replacing any non-letter character
-     * @param toTreat string carregada
-     * @return string filtrada
+     * Receives a string and applies a filter replacing any non-letter character.
+     * @param toTreat string carregada.
+     * @return string filtrada.
      */
     private String removePunctuation(String toTreat) {
         String regexToReplace = "([^\\p{L}\\d\\s_'-.\\x{2026}%⁃]|(\\s-|-\\s|,|\\.|\\(|\\)))";  // Regex removing ponctuation, but keeping some characteres

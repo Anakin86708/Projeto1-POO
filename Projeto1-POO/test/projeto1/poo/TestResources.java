@@ -15,7 +15,7 @@ import java.util.TreeSet;
 import static org.junit.Assert.*;
 
 /**
- * Some resources reused between tests
+ * Some resources reused between tests.
  *
  * @author Ariel Tadeu
  * @author Enzo Fujimoto
@@ -27,12 +27,10 @@ import static org.junit.Assert.*;
  * @see ControlTest
  */
 public class TestResources {
-    // método para treemap
-
     /**
-     * Create expected output of {@link Digraph}
+     * Create expected output of {@link Digraph}/
      *
-     * @return
+     * @return expected digraph result.
      */
     public static SortedMap<String, List<String>> generateResultSortedMap() {
         TreeMap<String, List<String>> expResult = new TreeMap<>();
@@ -56,10 +54,10 @@ public class TestResources {
 
     /**
      * Used to compare two files with list of adjacencies, ignoring the order of
-     * the nodes for each key
+     * the nodes for each key.
      *
-     * @param fileNameExpected
-     * @param fileNameActual
+     * @param fileNameExpected expected filename as .csv.
+     * @param fileNameActual actual filename as .csv.
      * @throws IOException
      */
     public static void compareFiles(String fileNameExpected, String fileNameActual) throws IOException {
@@ -91,10 +89,10 @@ public class TestResources {
 
     /**
      * Converts each line of the file to the adjacency list format, using a
-     * {@link TreeSet}
+     * {@link TreeSet}.
      *
-     * @param line
-     * @return
+     * @param line raw line from read file.
+     * @return Object array with key and all values connected.
      *
      * @see TreeSet
      * @see Collections#addAll(java.util.Collection, java.lang.Object...)
@@ -109,10 +107,10 @@ public class TestResources {
 
     /**
      * Checks whether the adjacency list is the same, ignoring the order of the
-     * nodes
+     * nodes.
      *
-     * @param expectedObjects
-     * @param actualObjects
+     * @param expectedObjects set used as reference.
+     * @param actualObjects compared set.
      *
      * @see Set#containsAll(java.util.Collection)
      */

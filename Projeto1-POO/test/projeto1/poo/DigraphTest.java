@@ -8,7 +8,7 @@ import static projeto1.poo.TestResources.generateResultSortedMap;
 
 /**
  * Testa o funcionamento do digrafo, recebendo os parâmetros de forma artificial
- * e comparando as respectivas saídas com resultados esperados
+ * e comparando as respectivas saídas com resultados esperados.
  *
  * @author Ariel Tadeu
  * @author Enzo Fujimoto

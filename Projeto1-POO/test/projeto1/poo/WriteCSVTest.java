@@ -10,7 +10,7 @@ import static projeto1.poo.TestResources.compareFiles;
 
 
 /**
- * Performs tests for the {@link WriteCSV} class
+ * Performs tests for the {@link WriteCSV} class.
  *
  * @author Ariel Tadeu
  * @author Enzo Fujimoto
@@ -21,7 +21,7 @@ public class WriteCSVTest {
     
 
     /**
-     * Compare the written file with the expected one
+     * Compare the written file with the expected one.
      */
     @Test
     public void testFileOutput() {

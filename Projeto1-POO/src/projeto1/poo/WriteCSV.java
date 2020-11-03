@@ -20,10 +20,9 @@ import java.util.SortedMap;
 public class WriteCSV {
 
     /**
-     * Make the method call if it contains a {@code fileName} with .csv 
+     * Make the method {@link WriteCSV#writeFile(java.util.SortedMap, java.lang.String) writeFile} call if it contains a {@code fileName} with .csv 
      * extension.
-     * {@link WriteCSV#writeFile(java.util.SortedMap, java.lang.String) WriteCSV}
-     *
+     * 
      *
      * @param adjMap Representation of the adjacency list.
      * @param fileName Name used as output file. It must be a .csv extesion.
@@ -41,7 +40,7 @@ public class WriteCSV {
     }
 
     /**
-     * Write the entire {@link adjMap} in the {@link fileName} file in .csv 
+     * Write the entire {@code adjMap} in the {@code fileName} file in .csv 
      * format.
      *
      * @param adjMap Representation of the adjacency list.
@@ -66,9 +65,9 @@ public class WriteCSV {
     }
 
     /**
-     * For each key in {@link adjMap} creates a line and writes the entire 
+     * For each key in {@code adjMap} creates a line and writes the entire 
      * contents of
-     * {@link fileName}
+     * {@code fileName}
      * 
      * @param adjMap Representation of the adjacency list.
      * @param fileName Name used as output file. It must be a .csv extesion.
