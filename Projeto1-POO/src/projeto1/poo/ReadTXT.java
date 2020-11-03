@@ -44,7 +44,7 @@ public class ReadTXT {
             Scanner scanner = new Scanner(file, "utf-8");
             while (scanner.hasNext()) {
                 String splitedLine = removePunctuation(lowerWords(scanner.next()));
-                if (!splitedLine.equals(""))
+                if (!splitedLine.equals("") || !splitedLine.isEmpty())
                     arrayList.add(splitedLine);
             }
         } catch (FileNotFoundException ex) {

@@ -28,8 +28,8 @@ public class ControlTest {
      * @see Digraph
      * @see WriteCSV
      */
-    @BeforeClass
-    public static void setUpClass() {
+    @Test
+    public void testSetUpClass() {
         List<String> inputTest = new ArrayList<>();
         String[] fileNamesStrings = {
             "test/resources/Ex1_WantedAndWild.txt",
