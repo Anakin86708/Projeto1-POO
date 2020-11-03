@@ -9,8 +9,8 @@ import java.util.Map;
 import java.util.SortedMap;
 
 /**
- * Responável por realizar a saída de um {@link Digraph Digraph} em um arquivo
- * de texto em formato .csv
+ * Responsible for outputting a {@link Digraph Digraph} in a text file in .csv
+ * format.
  *
  * @author Ariel Tadeu
  * @author Enzo Fujimoto
@@ -20,14 +20,13 @@ import java.util.SortedMap;
 public class WriteCSV {
 
     /**
-     * Realiza a chamada do método caso contenha um {@code fileName} com 
-     * extensão .csv
+     * Make the method call if it contains a {@code fileName} with .csv 
+     * extension.
      * {@link WriteCSV#writeFile(java.util.SortedMap, java.lang.String) WriteCSV}
      *
      *
-     * @param adjMap Representação da lista de adjacência
-     * @param fileName Nome utilizado como arquivo de saida, necessáriamente com
-     * extensão .csv
+     * @param adjMap Representation of the adjacency list.
+     * @param fileName Name used as output file. It must be a .csv extesion.
      */
     public WriteCSV(SortedMap<String, List<String>> adjMap, String fileName) {
         try {
@@ -42,10 +41,11 @@ public class WriteCSV {
     }
 
     /**
-     * Escreve todo o {@link adjMap} no arquivo {@link fileName} em formato .csv
+     * Write the entire {@link adjMap} in the {@link fileName} file in .csv 
+     * format.
      *
-     * @param adjMap Representação da lista de adjacência
-     * @param fileName Nome utilizado como arquivo de saida, necessáriamente
+     * @param adjMap Representation of the adjacency list.
+     * @param fileName Name used as output file. It must be a .csv extesion.
      */
     private void writeFile(SortedMap<String, List<String>> adjMap, String fileName) {
         try {
@@ -66,11 +66,12 @@ public class WriteCSV {
     }
 
     /**
-     * Para cada chave em {@link adjMap} cria uma linha e escreve todo o conteúdo
-     * de {@link fileName}
+     * For each key in {@link adjMap} creates a line and writes the entire 
+     * contents of
+     * {@link fileName}
      * 
-     * @param adjMap Representação da lista de adjacência
-     * @param fileName Nome utilizado como arquivo de saida, necessáriamente
+     * @param adjMap Representation of the adjacency list.
+     * @param fileName Name used as output file. It must be a .csv extesion.
      * 
      * @throws IOException 
      */

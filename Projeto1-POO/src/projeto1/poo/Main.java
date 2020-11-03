@@ -5,10 +5,10 @@ import java.util.List;
 import java.util.Scanner;
 
 /**
- * Responsável pela interface com o usuário, recebendo todos os arquivos
- * desejados. Realiza a verificação pela extensão .txt. <br>
- * A saída é feita com o mesmo nome de arquivo, apenas alterando a extensão para
- * .csv
+ * Responsible for the user interface, receiving all the desired files.
+ * Performs the verification by the extension .txt. <br>
+ * The output is made with the same file name, just changing the extension to
+ * .csv.
  *
  * @author Ariel Tadeu
  * @author Enzo Fujimoto
@@ -18,8 +18,8 @@ import java.util.Scanner;
 public class Main {
 
     /**
-     * Responável por iniciar todo o programa e passar o dados do usuário para
-     * o {@link Control}
+     * Responsible for starting the entire program and passing the user data to
+     * the {@link Control}.
      */
     private void startProgram() {
         List<String> fileRequest = userTextInterface();
@@ -27,10 +27,10 @@ public class Main {
     }
     
     /**
-     * Exibe ao usuário a interface de texto e requisita todos os caminhos
-     * completos para os arquivos que serão transformados.
+     * Displays to the user the text interface and requests all the full paths
+     * to the files to be transformed.
      * 
-     * @return Lista com todos os caminhos completos para serem processados
+     * @return List with all the complete paths to be processed.
      */
     private List<String> userTextInterface() {
         Scanner reader = new Scanner(System.in);
@@ -50,9 +50,9 @@ public class Main {
     }
 
     /**
-     * <b>Entrada principal do programa</b>
+     * <b>Main entry</b>
      * 
-     * @param args
+     * @param args Not implemented, therefore not used.
      */
     public static void main(String[] args) {
         Main main = new Main();
