@@ -3,22 +3,28 @@ package projeto1.poo;
 import java.io.IOException;
 import java.util.List;
 import java.util.SortedMap;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import static org.junit.Assert.fail;
 import org.junit.Test;
 import static projeto1.poo.TestResources.generateResultSortedMap;
 import static projeto1.poo.TestResources.compareFiles;
 
 
 /**
+ * Performs tests for the {@link WriteCSV} class
  *
- * @author Leo
+ * @author Ariel Tadeu
+ * @author Enzo Fujimoto
+ * @author Guilherme Lopes
+ * @author Leonardo Teixeira
  */
 public class WriteCSVTest {
     
 
+    /**
+     * Compare the written file with the expected one
+     */
     @Test
-    public void testSomeMethod() {
+    public void testFileOutput() {
         try {
             SortedMap<String,List<String>> adjMap = generateResultSortedMap();
             new WriteCSV(adjMap, "test/resources/result.csv");
@@ -27,6 +33,7 @@ public class WriteCSVTest {
             
         } catch (IOException ex) {
             System.err.println("Invalid file\n" + ex.getLocalizedMessage());
+            fail("Invalid file\n" + ex.getLocalizedMessage());
         }
     }
     

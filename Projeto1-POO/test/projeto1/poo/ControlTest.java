@@ -4,9 +4,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import org.junit.BeforeClass;
+import static org.junit.Assert.fail;
 import org.junit.Test;
 import static projeto1.poo.TestResources.compareFiles;
 
@@ -55,6 +53,7 @@ public class ControlTest {
             }
         } catch (IOException ex) {
             System.err.println(ex.getLocalizedMessage());
+            fail(ex.getLocalizedMessage());
         }
     }
     
@@ -73,6 +72,7 @@ public class ControlTest {
             compareFiles(fileNameExpected, fileNameActual.replace(".txt", ".csv"));
         } catch (IOException ex) {
             System.err.println(ex.getLocalizedMessage());
+            fail(ex.getLocalizedMessage());
         }
     }
 

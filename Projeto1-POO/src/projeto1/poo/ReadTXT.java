@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Scanner;
 public class ReadTXT {
 
-    private List<String> treatedTextArrayList;    
+    private List<String> treatedTextList;    
 
     /**
      * Creates an object of File type and splits words from their content
@@ -19,7 +19,7 @@ public class ReadTXT {
                 throw new Exception(fileNameString + "isn`t a valid .txt file\n");
             
             File file = new File(fileNameString);
-            treatedTextArrayList = splitWords(file);
+            treatedTextList = splitWords(file);
         } catch (Exception e) {
             System.err.println("Invalid file!\n" + e.getLocalizedMessage());
         }
@@ -30,7 +30,7 @@ public class ReadTXT {
     }
 
     public List<String> getTreatedTextList() {
-        return treatedTextArrayList;
+        return treatedTextList;
     }
 
     /**
