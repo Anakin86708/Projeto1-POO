@@ -43,17 +43,36 @@ public class ControlTest {
         String[] outputStrings = {
             "test/resources/SolEx1_WantedAndWild.txt",
             "test/resources/SolEx2_AMascaraDaMorteRubra.txt",
-            "test/resources/SolEx3_LuarDosSertao.txt",
+            "test/resources/SolEx3_LuarDoSertao.txt",
             "test/resources/SolEx4_Parabens.txt",
             "test/resources/SolEx5_TresMotivosParaVacinarSeuPet.txt"
         };
         
         try {
             for (int i = 0; i < outputStrings.length; i++) {
-                compareFiles(outputStrings[i], fileNamesStrings[i].replace(".txt", ".csv"));
+                System.out.println("Comparing: " + outputStrings[i]);
+                compareFiles(outputStrings[i].replace(".txt", ".csv"), fileNamesStrings[i].replace(".txt", ".csv"));
             }
         } catch (IOException ex) {
-            Logger.getLogger(ControlTest.class.getName()).log(Level.SEVERE, null, ex);
+            System.err.println(ex.getLocalizedMessage());
+        }
+    }
+    
+    /**
+     * Testing using a valid file
+     */
+    @Test
+    public void testValidFile() {
+        String fileNameExpected = "test/resources/SolEx2_AMascaraDaMorteRubra.csv";
+        String fileNameActual = "test/resources/Ex2_AMascaraDaMorteRubra.txt";
+        List<String> inputTest = new ArrayList<>();
+        inputTest.add(fileNameActual);
+        Control instance = new Control(inputTest);
+        
+        try {
+            compareFiles(fileNameExpected, fileNameActual.replace(".txt", ".csv"));
+        } catch (IOException ex) {
+            System.err.println(ex.getLocalizedMessage());
         }
     }
 
@@ -69,6 +88,7 @@ public class ControlTest {
         };
         Collections.addAll(inputTest, fileNamesStrings);
         Control instance = new Control(inputTest);
+        System.out.println("An error is expected: ");
         
     }
     

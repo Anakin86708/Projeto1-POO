@@ -44,7 +44,8 @@ public class ReadTXT {
             Scanner scanner = new Scanner(file, "utf-8");
             while (scanner.hasNext()) {
                 String splitedLine = removePunctuation(lowerWords(scanner.next()));
-                arrayList.add(splitedLine);
+                if (!splitedLine.equals(""))
+                    arrayList.add(splitedLine);
             }
         } catch (FileNotFoundException ex) {
             System.err.println("File " + file.getName() + " not found!\n" + ex.getLocalizedMessage());
@@ -67,7 +68,7 @@ public class ReadTXT {
      * @return string filtrada
      */
     private String removePunctuation(String toTreat) {
-        String regexToReplace = "[^\\p{L}\\d\\s_']";
+        String regexToReplace = "([^\\p{L}\\d\\s_'-.\\x{2026}%⁃]|(\\s-|-\\s|,|\\.|\\(|\\)))";  // Regex removing ponctuation, but keeping some characteres
         return toTreat.replaceAll(regexToReplace, "");
     }
 

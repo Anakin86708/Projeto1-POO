@@ -1,6 +1,7 @@
 package projeto1.poo;
 
 import java.io.BufferedReader;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -36,8 +37,14 @@ public class TestResources {
     }
     
     public static void compareFiles(String fileNameExpected, String fileNameActual) throws IOException {
-        BufferedReader expectedBufferedReader = new BufferedReader(new FileReader(fileNameExpected));
-        BufferedReader actualBufferedReader = new BufferedReader(new FileReader(fileNameActual));
+        BufferedReader expectedBufferedReader = null;
+        BufferedReader actualBufferedReader = null;
+        try {
+            expectedBufferedReader = new BufferedReader(new FileReader(fileNameExpected));
+            actualBufferedReader = new BufferedReader(new FileReader(fileNameActual));
+        } catch (FileNotFoundException fileNotFoundException) {
+            System.err.println("File not found!\n" + fileNotFoundException.getMessage());
+            }
         
         String expectedLine = expectedBufferedReader.readLine();
         String actualLine = actualBufferedReader.readLine();

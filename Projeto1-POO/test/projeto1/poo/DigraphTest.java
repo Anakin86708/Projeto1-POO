@@ -27,8 +27,8 @@ public class DigraphTest {
         Digraph instance = new Digraph(array);
         SortedMap<String, List<String>> expResult = generateResultSortedMap();
         SortedMap<String, List<String>> result = instance.getAdjMap();
-        System.out.println("Esperado:  " + expResult);
-        System.out.println("Resultado: " + result);
+        System.out.println("Expected:  " + expResult);
+        System.out.println("Result: " + result);
         assertEquals(expResult, result);
     }
 }

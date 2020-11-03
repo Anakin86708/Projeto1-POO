@@ -26,7 +26,7 @@ public class WriteCSVTest {
             compareFiles("test/resources/expected.csv", "test/resources/result.csv");
             
         } catch (IOException ex) {
-            Logger.getLogger(WriteCSVTest.class.getName()).log(Level.SEVERE, null, ex);
+            System.err.println("Invalid file\n" + ex.getLocalizedMessage());
         }
     }
     
