@@ -63,6 +63,11 @@ public class Digraph {
         }
     }
     
+    /**
+     * Returns the digraph in the form of an {@code SortedMap}
+     * 
+     * @return 
+     */
     public SortedMap<String, List<String>> getAdjMap() {
         return adjMap;
     }    
