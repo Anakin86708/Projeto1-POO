@@ -9,7 +9,10 @@ import java.util.Scanner;
  * Responsible to receive a text file and treat it, removing punctuations,
  * transforming all characters to lowercase and splitting words
  * 
+ * @author Ariel Tadeu
+ * @author Enzo Fujimoto
  * @author Guilherme Lopes
+ * @author Leonardo Teixeira
  */
 
 public class ReadTXT {
