@@ -7,8 +7,8 @@ import org.junit.Test;
 import static projeto1.poo.TestResources.generateResultSortedMap;
 
 /**
- * Testa o funcionamento do digrafo, recebendo os parâmetros de forma artificial
- * e comparando as respectivas saídas com resultados esperados.
+ * Test digraph operation, receiving parameter artificialy and 
+ * compair it outputs with expected results
  *
  * @author Ariel Tadeu
  * @author Enzo Fujimoto
@@ -18,7 +18,7 @@ import static projeto1.poo.TestResources.generateResultSortedMap;
 public class DigraphTest {
 
     /**
-     * Test of getAdjMap method, of class Digraph.
+     * Test of getAdjMap method, of Digraph class.
      */
     @Test
     public void testGetAdjMap() {

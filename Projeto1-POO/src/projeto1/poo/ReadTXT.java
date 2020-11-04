@@ -5,6 +5,13 @@ import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+/**
+ * Responsible to receive a text file and treat it, removing punctuations,
+ * transforming all characters to lowercase and splitting words
+ * 
+ * @author Guilherme Lopes
+ */
+
 public class ReadTXT {
 
     private List<String> treatedTextList;    

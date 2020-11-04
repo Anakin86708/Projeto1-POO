@@ -4,7 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.SortedMap;
 import java.util.TreeMap;
-
+/**
+ * Responsible for creating a digraph, containg key values and it respective 
+ * values
+ * 
+ * @author Guiskater
+ */
 public class Digraph {
 
     private final SortedMap<String,List<String>> adjMap;

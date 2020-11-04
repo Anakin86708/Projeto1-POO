@@ -19,9 +19,9 @@ import static projeto1.poo.TestResources.compareFiles;
  */
 public class WriteCSVTest {
     
-
     /**
-     * Compare the written file with the expected one.
+     * Writes the .csv file using WriteCSV and compares it to the expected file
+     * 
      */
     @Test
     public void testFileOutput() {

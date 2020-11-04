@@ -7,9 +7,8 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 /**
- * Realiza testes por meio da comparação entre resultados gerados e experados
- * por meio de arquivos de entrada.
- *
+ * Realizes tests by comparing generated and expected results using input files
+ * 
  * @author Ariel Tadeu
  * @author Enzo Fujimoto
  * @author Guilherme Lopes
