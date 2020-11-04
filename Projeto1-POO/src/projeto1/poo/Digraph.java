@@ -8,7 +8,7 @@ import java.util.TreeMap;
  * Responsible for creating a digraph, containg key values and it respective 
  * values
  * 
- * @author Guiskater
+ * @author Guilherme Lopes
  */
 public class Digraph {
 
